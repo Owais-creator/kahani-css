@@ -98,6 +98,7 @@ h1:hover{
     }
     .box .text {
         width: 100%;
+        text-align: center;
     }
     .box img {
         width: 80%;
