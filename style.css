@@ -18,7 +18,7 @@ h1 {
     font-size: 45px;
     margin: 30px 0;
     text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-     font-family: "Cinzel Decorative", serif;
+     font-family: "Great Vibes", cursive;
   font-weight: 400;
   font-style: normal;
 }
@@ -82,12 +82,14 @@ h1:hover{
     color: #0055aa;
     font-size: 26px;
     margin-bottom: 10px;
+    margin-left: 80px;
 }
 
 .box p {
     font-size: 20px;
     color: rgb(8, 103, 134);
     margin-top: 10px;
+    margin-left: 50px;
 }
 
 /* Responsive Design */
@@ -98,7 +100,7 @@ h1:hover{
     }
     .box .text {
         width: 100%;
-        text-align: center;
+      text-align:center;
     }
     .box img {
         width: 80%;
@@ -112,10 +114,11 @@ h1:hover{
 @media (max-width: 768px) {
     .box {
         flex-direction: column !important;
-        text-align: center;
+        
     }
     .box .text {
         width: 100%;
+        
     }
     .box img {
         width: 80%;
