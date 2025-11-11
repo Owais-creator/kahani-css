@@ -24,11 +24,14 @@ h1 {
 }
 h1:hover{
   cursor: pointer;
-  color:lightblue;
- 
+  color:rgb(28, 109, 136);
+ transform: scale(1.05);
 }
 
 .box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: wheat;
     width: 85%;
     max-width: 700px;
@@ -36,28 +39,44 @@ h1:hover{
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
-   font-family: "Great Vibes", cursive;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+    gap: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
-.box:hover{
-   transform: scale(1.05); /* box moves slightly outward */
+
+.box-left {
+    flex-direction: row; /* image left, text right */
+}
+
+.box-right {
+    flex-direction: row-reverse; /* text left, image right */
+}
+
+.box:hover {
+    transform: scale(1.05);
     box-shadow: 0 0 20px rgba(0, 100, 255, 0.3);
     cursor: pointer;
 }
 
 .box img {
-    width: 100%;
+    width: 45%;
     max-width: 350px;
     border-radius: 10px;
-    margin-top: 10px;
+    margin-top: 0;
 }
-.box img:hover{
-  transform: scale(1.05); /* box moves slightly outward */
+
+.box img:hover {
+    transform: scale(1.05);
     box-shadow: 0 0 20px rgba(0, 100, 255, 0.3);
     cursor: pointer;
 }
 
+.box .text {
+    width: 55%;
+    text-align: left;
+}
 
 .box h2 {
     color: #0055aa;
@@ -67,8 +86,41 @@ h1:hover{
 
 .box p {
     font-size: 20px;
-    color:rgb(8, 103, 134);
+    color: rgb(8, 103, 134);
     margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .box {
+        flex-direction: column !important;
+        text-align: center;
+    }
+    .box .text {
+        width: 100%;
+    }
+    .box img {
+        width: 80%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .box {
+        flex-direction: column !important;
+        text-align: center;
+    }
+    .box .text {
+        width: 100%;
+    }
+    .box img {
+        width: 80%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
 }
 
 /* Responsive Design */
